@@ -1,0 +1,445 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /friend_connection/:
+    get:
+      tags:
+      - friend_connection
+      description: get FriendConnection
+      operationId: FriendConnectionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.FriendConnection'
+        "403":
+          description: ""
+    post:
+      tags:
+      - friend_connection
+      description: create FriendConnection
+      operationId: FriendConnectionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for FriendConnection content
+        required: true
+        schema:
+          $ref: '#/definitions/models.FriendConnection'
+      responses:
+        "201":
+          description: '{int} models.FriendConnection'
+        "403":
+          description: body is empty
+  /friend_connection/{id}:
+    get:
+      tags:
+      - friend_connection
+      description: get FriendConnection by id
+      operationId: FriendConnectionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.FriendConnection'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - friend_connection
+      description: update the FriendConnection
+      operationId: FriendConnectionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for FriendConnection content
+        required: true
+        schema:
+          $ref: '#/definitions/models.FriendConnection'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.FriendConnection'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - friend_connection
+      description: delete the FriendConnection
+      operationId: FriendConnectionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /subscribe_updates/:
+    get:
+      tags:
+      - subscribe_updates
+      description: get SubscribeUpdates
+      operationId: SubscribeUpdatesController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SubscribeUpdates'
+        "403":
+          description: ""
+    post:
+      tags:
+      - subscribe_updates
+      description: create SubscribeUpdates
+      operationId: SubscribeUpdatesController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for SubscribeUpdates content
+        required: true
+        schema:
+          $ref: '#/definitions/models.SubscribeUpdates'
+      responses:
+        "201":
+          description: '{int} models.SubscribeUpdates'
+        "403":
+          description: body is empty
+  /subscribe_updates/{id}:
+    get:
+      tags:
+      - subscribe_updates
+      description: get SubscribeUpdates by id
+      operationId: SubscribeUpdatesController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SubscribeUpdates'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - subscribe_updates
+      description: update the SubscribeUpdates
+      operationId: SubscribeUpdatesController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for SubscribeUpdates content
+        required: true
+        schema:
+          $ref: '#/definitions/models.SubscribeUpdates'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.SubscribeUpdates'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - subscribe_updates
+      description: delete the SubscribeUpdates
+      operationId: SubscribeUpdatesController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /user/:
+    get:
+      tags:
+      - user
+      description: get User
+      operationId: UserController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.User'
+        "403":
+          description: ""
+    post:
+      tags:
+      - user
+      description: create User
+      operationId: UserController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for User content
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      responses:
+        "201":
+          description: '{int} models.User'
+        "403":
+          description: body is empty
+  /user/{id}:
+    get:
+      tags:
+      - user
+      description: get User by id
+      operationId: UserController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.User'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - user
+      description: update the User
+      operationId: UserController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for User content
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.User'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - user
+      description: delete the User
+      operationId: UserController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+definitions:
+  models.FriendConnection:
+    title: FriendConnection
+    type: object
+    properties:
+      CreatedBy:
+        type: integer
+        format: int64
+      CreationTime:
+        type: string
+        format: string
+      Id:
+        type: integer
+        format: int64
+      IsMutual:
+        type: integer
+        format: int32
+      TargetUserEmail:
+        type: string
+      UserEmail:
+        type: string
+  models.SubscribeUpdates:
+    title: SubscribeUpdates
+    type: object
+    properties:
+      CreatedBy:
+        type: integer
+        format: int64
+      CreationTime:
+        type: string
+        format: string
+      Id:
+        type: integer
+        format: int64
+      IsActive:
+        type: integer
+        format: int32
+      RequestorEmail:
+        type: string
+      TargetEmail:
+        type: string
+  models.User:
+    title: User
+    type: object
+    properties:
+      CreatedBy:
+        type: integer
+        format: int64
+      CreationTime:
+        type: string
+        format: string
+      Id:
+        type: integer
+        format: int64
+      IsActive:
+        type: integer
+        format: int32
+      LastLoginTime:
+        type: string
+        format: string
+      LastModificationTime:
+        type: string
+        format: string
+      LastModifiedBy:
+        type: integer
+        format: int64
+      Name:
+        type: string
+      Password:
+        type: string
+      PhoneNumber:
+        type: string
+      SurName:
+        type: integer
+        format: int64
+      UserName:
+        type: string
+tags:
+- name: friend_connection
+  description: |
+    FriendConnectionController operations for FriendConnection
+- name: subscribe_updates
+  description: |
+    SubscribeUpdatesController operations for SubscribeUpdates
+- name: user
+  description: |
+    UserController operations for User
