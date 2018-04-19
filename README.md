@@ -10,7 +10,11 @@ orm.RegisterDataBase("default", "mysql", "root:root@tcp(127.0.0.1:3306)/identity
    then run "bee run watchall true"
 
    As below image show:
+   
+   https://github.com/AccentureRapid/IdentityServerApi/blob/master/201801.png
 
 3. open http://localhost:8091/swagger/, you could see all the api document.
 
    As below image show:
+   
+   https://github.com/AccentureRapid/IdentityServerApi/blob/master/201802.png
