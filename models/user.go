@@ -14,7 +14,7 @@ type User struct {
 	Id                   int       `orm:"column(id);pk"`
 	UserName             string    `orm:"column(user_name);size(255)"`
 	Name                 string    `orm:"column(name);size(255)"`
-	SurName              int       `orm:"column(sur_name)"`
+	SurName              string    `orm:"column(sur_name);size(255)"`
 	Password             string    `orm:"column(password);size(255)"`
 	PhoneNumber          string    `orm:"column(phone_number);size(255)"`
 	IsActive             int8      `orm:"column(is_active)"`
