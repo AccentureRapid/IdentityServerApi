@@ -11,10 +11,10 @@ orm.RegisterDataBase("default", "mysql", "root:root@tcp(127.0.0.1:3306)/identity
 
    As below image show:
    
-   https://github.com/AccentureRapid/IdentityServerApi/blob/master/201801.png
+   ![](https://github.com/AccentureRapid/IdentityServerApi/blob/master/201801.png)
 
 3. open http://localhost:8091/swagger/, you could see all the api document.
 
    As below image show:
    
-   https://github.com/AccentureRapid/IdentityServerApi/blob/master/201802.png
+   ![](https://github.com/AccentureRapid/IdentityServerApi/blob/master/201802.png)
